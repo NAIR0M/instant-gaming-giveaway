@@ -12,7 +12,6 @@
 (function () {
   'use strict';
 
-  // Replace with the URL of your JSON file
   const jsonUrl = 'https://raw.githubusercontent.com/NAIR0M/instant-gaming-giveaway/main/giveawayList.json';
 
   function participate() {
