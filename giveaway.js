@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         instant gaming giveaway
+// @name         participate
 // @namespace    http://tampermonkey.net/
 // @version      2024-09-10
 // @description  try to take over the world!
@@ -14,21 +14,27 @@
 
   const jsonUrl = 'https://raw.githubusercontent.com/NAIR0M/instant-gaming-giveaway/main/giveawayList.json';
 
-  function participate() {
+  /*function participate() {
+    // Recherche du bouton avec les classes 'button' et 'validate'
+    const button = document.querySelector('button.button.validate');
+
+    if (button !== null) { // Vérifie si le bouton n'est pas désactivé
+      console.log('Bouton trouvé et actif, tentative de clic...');
+      button.click(); // Simuler le clic
+    }
     return true;
-  }
+  }*/
+
 
   function openUrlSequentially(urls) {
     if (urls.length === 0) return;
 
     const url = urls.shift(); // Get the first URL
-    const newTab = window.open(url, '_blank');
+    const newTab = window.open(url, '_blank'); // Open it in a new tab
 
     newTab.onload = function () {
-      if (participate()) {
-        newTab.close(); // Close the tab
-        openUrlSequentially(urls); // Open the next URL
-      }
+      setTimeout(() => { newTab.close(); }, 2000); // Close the tab after 5 seconds
+      openUrlSequentially(urls); // Open the next URL
     };
   }
 
