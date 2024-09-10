@@ -33,9 +33,9 @@
     const newTab = window.open(url, '_blank'); // Open it in a new tab
 
     newTab.onload = function () {
-      setTimeout(() => { newTab.close(); }, 2000); // Close the tab after 5 seconds
+      setTimeout(() => {
       openUrlSequentially(urls); // Open the next URL
-    };
+    }, 1000);};
   }
 
   // Add a menu command to execute the script
