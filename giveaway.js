@@ -17,7 +17,10 @@
   const jsonUrl = 'https://raw.githubusercontent.com/NAIR0M/instant-gaming-giveaway/main/giveawayList.json';
 
   function openUrlSequentially(urls) {
-    if (urls.length === 0) return;
+    if (urls.length === 0) {
+      alert("Done!");
+      return;
+    }
 
     const url = urls.shift(); // Get the first URL
 
