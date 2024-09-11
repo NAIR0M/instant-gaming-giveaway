@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         giveaway
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.0.1
 // @description  try to take over the world!
 // @author       Nairom
 // @downloadURL  https://github.com/NAIR0M/instant-gaming-giveaway/raw/main/giveaway.user.js
@@ -16,7 +16,7 @@
 
   const jsonUrl = 'https://raw.githubusercontent.com/NAIR0M/instant-gaming-giveaway/main/giveawayList.json';
 
-  function openUrlSequentially(urls, bool) {
+  function openUrlSequentially(urls, potato) {
     if (urls.length === 0) {
       alert("Done!");
       return;
@@ -26,8 +26,8 @@
     window.open(url, '_blank') // Open it in a new tab
 
     // Ajust delay for potato pc
-    if (bool) {
-      setTimeout(() => openUrlSequentially(urls, bool), 50);
+    if (potato) {
+      setTimeout(() => openUrlSequentially(urls, potato), 50);
     } else {
       openUrlSequentially(urls);  
     }
