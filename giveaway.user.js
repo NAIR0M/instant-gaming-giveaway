@@ -25,10 +25,11 @@
     const url = urls.shift(); // Get the first URL
     window.open(url, '_blank') // Open it in a new tab
 
+    // Ajust delay for potato pc
     if (bool) {
       setTimeout(() => openUrlSequentially(urls, bool), 50);
     } else {
-      openUrlSequentially(urls); // Open the next URL    
+      openUrlSequentially(urls);  
     }
   }
 
