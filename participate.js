@@ -4,8 +4,8 @@
 // @version      2024-09-10
 // @description  try to take over the world!
 // @author       Nairom
-// @downloadURL  https://github.com/NAIR0M/instant-gaming-giveaway/raw/main/participate.js
-// @updateURL    https://github.com/NAIR0M/instant-gaming-giveaway/raw/main/participate.js
+// @downloadURL  https://raw.githubusercontent.com/NAIR0M/instant-gaming-giveaway/main/participate.js
+// @updateURL    https://raw.githubusercontent.com/NAIR0M/instant-gaming-giveaway/main/participate.js
 // @match        *://www.instant-gaming.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=instant-gaming.com
 // @run-at       document-idle
