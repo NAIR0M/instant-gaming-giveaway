@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         participate
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.0.1
 // @description  try to take over the world!
 // @author       Nairom
 // @downloadURL  https://github.com/NAIR0M/instant-gaming-giveaway/raw/main/participate.user.js
@@ -28,7 +28,7 @@
             location.reload();
         }
 
-        window.addEventListener('DomContentLoaded', function () {
+        onload = function () {
             const socials = document.querySelectorAll("a.button.reward.alerts");
             socials.forEach(social => social.click());
 
@@ -37,7 +37,7 @@
             setTimeout(function () {
                 window.close();
             }, 5);
-        });
+        }
     }
-    
+
 })();
