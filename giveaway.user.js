@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         giveaway
 // @namespace    http://tampermonkey.net/
-// @version      2024-09-10
+// @version      2024-09-11
 // @description  try to take over the world!
 // @author       Nairom
 // @downloadURL  https://github.com/NAIR0M/instant-gaming-giveaway/raw/main/giveaway.user.js
