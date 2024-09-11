@@ -28,7 +28,7 @@
             location.reload();
         }
 
-        window.addEventListener('DOMContentLoaded', (event) => {
+        window.addEventListener('DomContentLoaded', function () {
             const socials = document.querySelectorAll("a.button.reward.alerts");
             socials.forEach(social => social.click());
 
