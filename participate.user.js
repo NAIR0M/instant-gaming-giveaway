@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         participate
 // @namespace    http://tampermonkey.net/
-// @version      1.0.2
+// @version      1.0.3
 // @description  try to take over the world!
 // @author       Nairom
 // @downloadURL  https://github.com/NAIR0M/instant-gaming-giveaway/raw/main/participate.user.js
@@ -20,21 +20,25 @@
             document.location.href = document.location.href + '?igr=Nyarom'
         }
 
-        const button = document.querySelector('button.button.validate');
-
-        if (button !== null) { //check the presence of the button
-            console.log('Bouton trouvé et actif, tentative de clic...');
-            button.click(); //click the button
-            location.reload();
+        function participate() {
+            // Get the participate button element.
+            const participate = document.querySelector("button.button.validate");
+            // Click on participate if it exists.
+            if (participate !== null) {
+                participate.click();
+                location.reload();
+            }
         }
 
-        onload = function () {
+        function socials() {
             const socials = document.querySelectorAll("a.button.reward.alerts");
             socials.forEach(social => social.click());
 
             //TODO block socials redirection
         }
 
+        onload = participate();
+        socials();
         window.close();
     }
 
