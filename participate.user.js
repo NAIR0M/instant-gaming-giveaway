@@ -28,13 +28,16 @@
             location.reload();
         }
 
-        const socials = document.querySelectorAll("a.button.reward.alerts");
-        socials.forEach(social => social.click());
-        //TODO block socials redirection
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const socials = document.querySelectorAll("a.button.reward.alerts");
+            socials.forEach(social => social.click());
 
-        setTimeout(function () {
-            window.close();
-        }, 5);
+            //TODO block socials redirection
+
+            setTimeout(function () {
+                window.close();
+            }, 5);
+        });
     }
-
+    
 })();
