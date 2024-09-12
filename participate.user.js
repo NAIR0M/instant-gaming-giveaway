@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         participate
 // @namespace    http://tampermonkey.net/
-// @version      1.0.8
+// @version      1.0.9
 // @description  try to take over the world!
 // @author       Nairom
 // @downloadURL  https://github.com/NAIR0M/instant-gaming-giveaway/raw/main/participate.user.js
@@ -32,22 +32,17 @@
 
         function socials() {
             const socials = document.querySelectorAll("a.button.reward.alerts");
-            socials.forEach(social => {
-                // Prevent redirection on social buttons click
-                social.addEventListener('click', function (event) {
-                    event.preventDefault(); // Block the default redirection
-                    // Perform any other logic if needed (e.g., tracking, console log, etc.)
-                    console.log(`Clicked on social button: ${social.href}`);
-                });
-                social.click();
-            });
+            socials.forEach(social => social.click());
+
+            //TODO block socials redirection
+
         }
 
         participate();
         socials()
         setTimeout(() => {
             window.close();
-        }, 750);
+        }, 500);
     }
 
 })();
