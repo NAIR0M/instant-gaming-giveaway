@@ -38,7 +38,7 @@
     fetch(jsonUrl)
       .then(response => response.json())
       .then(data => {
-        const urls = data.giveaway.map(giveaway => `https://www.instant-gaming.com/en/giveaway/${giveaway}?igr=Nyarom`);
+        const urls = data.giveaway.map(giveaway => `https://www.instant-gaming.com/fr/giveaway/${giveaway}?igr=Nyarom`);
         openUrlSequentially(urls);
       })
       .catch(error => console.error('Error fetching JSON:', error));
@@ -48,7 +48,7 @@
     fetch(jsonUrl)
       .then(response => response.json())
       .then(data => {
-        const urls = data.giveaway.map(giveaway => `https://www.instant-gaming.com/en/giveaway/${giveaway}?igr=Nyarom`);
+        const urls = data.giveaway.map(giveaway => `https://www.instant-gaming.com/fr/giveaway/${giveaway}?igr=Nyarom`);
         openUrlSequentially(urls, true);
       })
       .catch(error => console.error('Error fetching JSON:', error));

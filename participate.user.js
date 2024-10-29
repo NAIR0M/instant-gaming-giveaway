@@ -15,7 +15,7 @@
 (function () {
     'use strict';
 
-    if (document.location.href.startsWith('https://www.instant-gaming.com/en/giveaway/')) {
+    if (document.location.href.startsWith('https://www.instant-gaming.com/fr/giveaway/')) {
         if (!document.location.href.endsWith('?igr=Nyarom')) {
             document.location.href = document.location.href + '?igr=Nyarom'
         }
