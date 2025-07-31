@@ -16,9 +16,9 @@
     'use strict';
 
     if (document.location.href.startsWith('https://www.instant-gaming.com/fr/giveaway/')) {
-        if (!document.location.href.endsWith('?igr=Nyarom')) {
+        /*if (!document.location.href.endsWith('?igr=Nyarom')) {
             document.location.href = document.location.href + '?igr=Nyarom'
-        }
+        }*/
 
         function participate() {
             // Get the participate button element.
@@ -31,12 +31,29 @@
         }
 
         function socials() {
+            const clickEvent = new MouseEvent("click", {
+                view: window,
+                bubbles: true,
+                cancelable: true
+            });
+
             const socials = document.querySelectorAll("a.button.reward.alerts");
-            socials.forEach(social => social.click());
+            let index = 0;
 
-            //TODO block socials redirection
+            function clickNext() {
+                if (index >= socials.length) return;
+                const social = socials[index];
 
+                social.setAttribute("target", "_blank");
+                social.dispatchEvent(clickEvent);
+
+                index++;
+                clickNext
+            }
+
+            clickNext();
         }
+
 
         participate();
         socials()
